@@ -1,0 +1,29 @@
+.notebook-item {
+  padding: 30px;
+}
+.notebook-item ul {
+  list-style-type: none;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+.notebook-item ul li h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+
+}.notebook-item ul li p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+}   
+@media (max-width: 950px) {
+  .notebook-item {
+    padding: 12px;
+  }
+  .notebook-item ul li h3 {
+    font-size: 14px;
+  }
+  .notebook-item ul li p {
+    font-size: 12px;
+  }
+  
+}
