@@ -1,6 +1,10 @@
 .notebook-item {
+  min-height: 180px;
+  max-height: 280px;
+  overflow-y: auto;
   padding: 30px;
 }
+
 .notebook-item ul {
   list-style-type: none;
   padding: 20px;
