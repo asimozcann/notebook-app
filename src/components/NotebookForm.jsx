@@ -4,35 +4,49 @@ const NotebookForm = (props) => {
   const [noteTitle, setnoteTitle] = useState("");
   const [noteContent, setnoteContent] = useState("");
 
-    const handleTitleChange = (e) => {
+  const handleTitleChange = (e) => {
     setnoteTitle(e.target.value);
-  }
+  };
   const handleContentChange = (e) => {
     setnoteContent(e.target.value);
-  }
+  };
 
-  const submitHandler = (e) => {   
+  const submitHandler = (e) => {
     e.preventDefault();
-    const newNoteData = {
-        noteTitle,
-        noteContent,
+    if (noteTitle.trim() === "" || noteContent.trim() === "") {
+      alert("Lütfen not başlığı ve içeriğini doldurun!");
+      return;
     }
+    const newNoteData = {
+      noteTitle,
+      noteContent,
+    };
     props.addNewNote(newNoteData);
     setnoteTitle("");
     setnoteContent("");
-  }
+    alert("Yeni not eklendi!");
+  };
   return (
     <form className="note-form" onSubmit={submitHandler}>
       <h1>Yeni Not Ekle:</h1>
       <div className="note-content">
-        <input type="text" placeholder="Not Başlığı" 
-        onChange={handleTitleChange}
-        value={noteTitle}/>
-        <textarea id="" placeholder="Notunuzu buraya yazınız..."
-        onChange={handleContentChange}
-        value={noteContent}></textarea>
+        <input
+          type="text"
+          placeholder="Not Başlığı"
+          onChange={handleTitleChange}
+          value={noteTitle}
+        />
+        <textarea
+          id=""
+          placeholder="Notunuzu buraya yazınız..."
+          onChange={handleContentChange}
+          value={noteContent}
+        ></textarea>
       </div>
-      <button type="submit"> <i className="fa-solid fa-plus"></i>Notu Ekle</button>
+      <button type="submit">
+        {" "}
+        <i className="fa-solid fa-plus"></i>Notu Ekle
+      </button>
     </form>
   );
 };
