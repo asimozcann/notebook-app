@@ -32,7 +32,7 @@ const NotebookForm = (props) => {
         onChange={handleContentChange}
         value={noteContent}></textarea>
       </div>
-      <button type="submit"> <i class="fa-solid fa-plus"></i>Notu Ekle</button>
+      <button type="submit"> <i className="fa-solid fa-plus"></i>Notu Ekle</button>
     </form>
   );
 };

@@ -11,7 +11,7 @@ const NotebookItem = ({ note, removeNote }) => {
           <p>{noteContent}</p>
           <button onClick={removeNote}>
             {" "}
-            <i class="fa-solid fa-trash"></i>Sil
+            <i className="fa-solid fa-trash"></i>Sil
           </button>
         </li>
       </ul>

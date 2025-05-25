@@ -31,7 +31,7 @@ const Notebook = () => {
         </div>
       </div>
       <button className="btn" onClick={clearNote}>
-        <i class="fa-solid fa-trash"> </i>
+        <i className="fa-solid fa-trash"> </i>
         Hepsini Sil
       </button>
     </div>
