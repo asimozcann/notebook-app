@@ -21,13 +21,15 @@ const Notebook = () => {
       <h2>Notlar</h2>
       <div className="notes-wrapper">
         <div className="notes">
-          {notes.map((note, index) => (
-            <NotebookItem
-              key={index}
-              note={note}
-              removeNote={() => removeNote(index)}
-            />
-          ))}
+          {notes.length === 0
+            ? "Henüz not eklenmedi!"
+            : notes.map((note, index) => (
+                <NotebookItem
+                  key={index}
+                  note={note}
+                  removeNote={() => removeNote(index)}
+                />
+              ))}
         </div>
       </div>
       <button className="btn" onClick={clearNote}>
